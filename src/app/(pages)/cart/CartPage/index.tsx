@@ -38,19 +38,19 @@ export const CartPage: React.FC<{
         <Fragment>
           {cartIsEmpty ? (
             <div className={classes.empty}>
-              Your cart is empty.
+              السلة فارغة.
               {typeof productsPage === 'object' && productsPage?.slug && (
                 <Fragment>
                   {' '}
-                  <Link href={`/${productsPage.slug}`}>Click here</Link>
-                  {` to shop.`}
+                  <Link href={`/${productsPage.slug}`}>اضغط هنا</Link>
+                  {` للتسوق.`}
                 </Fragment>
               )}
               {!user && (
                 <Fragment>
                   {' '}
-                  <Link href={`/login?redirect=%2Fcart`}>Log in</Link>
-                  {` to view a saved cart.`}
+                  <Link href={`/login?redirect=%2Fcart`}>تسجيل الدخول</Link>
+                  {` لعرض سلة محفوظة.`}
                 </Fragment>
               )}
             </div>
@@ -59,13 +59,13 @@ export const CartPage: React.FC<{
               <div>
                 {/* CART LIST HEADER */}
                 <div className={classes.header}>
-                  <p>Products</p>
+                  <p>المنتجات</p>
                   <div className={classes.headerItemDetails}>
                     <p></p>
                     <p></p>
-                    <p>Quantity</p>
+                    <p>الكمية</p>
                   </div>
-                  <p className={classes.headersubtotal}>Subtotal</p>
+                  <p className={classes.headersubtotal}>الإجمالي</p>
                 </div>
                 {/* CART ITEM LIST */}
                 <ul className={classes.itemsList}>
@@ -98,23 +98,23 @@ export const CartPage: React.FC<{
 
               <div className={classes.summary}>
                 <div className={classes.row}>
-                  <h6 className={classes.cartTotal}>Summary</h6>
+                  <h6 className={classes.cartTotal}>الملخص</h6>
                 </div>
 
                 <div className={classes.row}>
-                  <p className={classes.cartTotal}>Delivery Charge</p>
-                  <p className={classes.cartTotal}>$0</p>
+                  <p className={classes.cartTotal}>رسوم التوصيل</p>
+                  <p className={classes.cartTotal}>0</p>
                 </div>
 
                 <div className={classes.row}>
-                  <p className={classes.cartTotal}>Grand Total</p>
+                  <p className={classes.cartTotal}>الإجمالي</p>
                   <p className={classes.cartTotal}>{cartTotal.formatted}</p>
                 </div>
 
                 <Button
                   className={classes.checkoutButton}
                   href={user ? '/checkout' : '/login?redirect=%2Fcheckout'}
-                  label={user ? 'Checkout' : 'Login to checkout'}
+                  label={user ? 'الدفع' : 'تسجيل الدخول للدفع'}
                   appearance="primary"
                 />
               </div>

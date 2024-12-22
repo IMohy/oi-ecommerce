@@ -19,14 +19,15 @@ export const priceFromJSON = (priceJSON: string, quantity: number = 1, raw?: boo
 
       price = (priceValue / 100).toLocaleString('en-US', {
         style: 'currency',
-        currency: 'USD', // TODO: use `parsed.currency`
+        currency: 'EGP', // TODO: use `parsed.currency`
       })
 
       if (priceType === 'recurring') {
-        price += `/${parsed.recurring.interval_count > 1
-          ? `${parsed.recurring.interval_count} ${parsed.recurring.interval}`
-          : parsed.recurring.interval
-          }`
+        price += `/${
+          parsed.recurring.interval_count > 1
+            ? `${parsed.recurring.interval_count} ${parsed.recurring.interval}`
+            : parsed.recurring.interval
+        }`
       }
     } catch (e) {
       console.error(`Cannot parse priceJSON`) // eslint-disable-line no-console

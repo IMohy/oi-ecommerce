@@ -30,7 +30,7 @@ export const AddToCartButton: React.FC<{
     <Button
       href={isInCart ? '/cart' : undefined}
       type={!isInCart ? 'button' : undefined}
-      label={isInCart ? `✓ View in cart` : `Add to cart`}
+      label={isInCart ? `✓ العربة` : `إضافة إلى العربة`}
       el={isInCart ? 'link' : undefined}
       appearance={appearance}
       className={[
@@ -44,13 +44,13 @@ export const AddToCartButton: React.FC<{
       onClick={
         !isInCart
           ? () => {
-              addItemToCart({
-                product,
-                quantity,
-              })
+            addItemToCart({
+              product,
+              quantity,
+            })
 
-              router.push('/cart')
-            }
+            router.push('/cart')
+          }
           : undefined
       }
     />

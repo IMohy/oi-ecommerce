@@ -1,6 +1,7 @@
 'use client'
 
 import React, { Fragment, useCallback, useEffect, useRef, useState } from 'react'
+import Link from 'next/link'
 import qs from 'qs'
 
 import { Category, Product } from '../../../payload/payload-types'
@@ -26,6 +27,7 @@ type Result = {
 export type Props = {
   className?: string
   relationTo?: 'products'
+  page_title?: string
   populateBy?: 'collection' | 'selection'
   showPageRange?: boolean
   onResultChange?: (result: Result) => void // eslint-disable-line no-unused-vars
@@ -42,6 +44,7 @@ export const CollectionArchive: React.FC<Props> = props => {
     className,
     relationTo,
     showPageRange,
+    page_title,
     onResultChange,
     limit = 10,
     populatedDocs,
@@ -159,7 +162,12 @@ export const CollectionArchive: React.FC<Props> = props => {
             />
           </div>
         )}
-
+        {page_title && (
+          <div className={classes.pageTitleWrapper}>
+            <p className={classes.pageTitle}>{page_title}</p>
+            <Link href="/products">عرض الكل</Link>
+          </div>
+        )}
         <div className={classes.grid}>
           {results.docs?.map((result, index) => {
             return <Card key={index} relationTo="products" doc={result} showCategories />

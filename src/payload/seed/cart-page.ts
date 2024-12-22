@@ -71,7 +71,7 @@ export const cartPage: Partial<Page> = {
         {
           children: [
             {
-              text: 'Continue shopping',
+              text: 'المتابعة',
             },
           ],
           type: 'h4',
@@ -79,7 +79,7 @@ export const cartPage: Partial<Page> = {
         {
           children: [
             {
-              text: 'This is a custom layout building block ',
+              text: 'هذا عبارة عن صنف من صنف المحتويات المخصص ',
             },
             {
               type: 'link',

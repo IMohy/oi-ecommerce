@@ -40,18 +40,14 @@ const Promotion = () => {
   return (
     <section className={classes.promotion}>
       <div className={classes.textBox}>
-        <h3 className={classes.title}>Deals of the Month</h3>
-        <p>
-          Get ready for a shopping experience like never before with our Deals of the Month! Every
-          purchase comes with exclusive perks and offers, making this month a celebration of savvy
-          choices and amazing deals. Don't miss out! 🎁🛒
-        </p>
+        <h3 className={classes.title}>تخفيضات نهاية السنة</h3>
+        <p>دلوقتي هتلاقي أفضل التخفيضات في نهاية السنة على جميع المنتجات الموجودة في المتجر</p>
 
         <ul className={classes.stats}>
-          <StatBox label="Days" value={time.days} />
-          <StatBox label="Hours" value={time.hours} />
-          <StatBox label="Minutes" value={time.minutes} />
-          <StatBox label="Seconds" value={time.seconds} />
+          <StatBox label="الأيام" value={time.days} />
+          <StatBox label="الساعات" value={time.hours} />
+          <StatBox label="الدقائق" value={time.minutes} />
+          <StatBox label="الثواني" value={time.seconds} />
         </ul>
       </div>
     </section>

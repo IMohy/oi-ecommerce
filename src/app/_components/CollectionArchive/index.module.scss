@@ -36,6 +36,18 @@
   }
 }
 
+.pageTitleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--base);
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(30%, 1fr));
