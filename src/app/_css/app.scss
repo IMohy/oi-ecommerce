@@ -2,12 +2,12 @@
 @use './colors.scss' as *;
 @use './type.scss' as *;
 @import "./theme.scss";
-
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
 :root {
   --base: 24px;
-  --font-body: 'Jost', sans-serif;
-  --font-jost: 'Jost', sans-serif;
-
+  --font-body: 'Cairo', sans-serif;
+  --font-cairo: 'Cairo', sans-serif;
+  --font-tajawal: 'Tajawal', sans-serif;
   --gutter-h: 180px;
   --block-padding: 120px;
 
@@ -45,7 +45,7 @@ body,
 }
 
 body {
-  font-family: var(--font-jost);
+  font-family: var(--font-tajawal);
   margin: 0;
   padding: 0;
   color: var(--color-dark-500);

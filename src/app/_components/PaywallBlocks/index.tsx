@@ -106,15 +106,5 @@ export const PaywallBlocks: React.FC<{
     )
   }
 
-  if (!blocks || blocks.length === 0) {
-    return (
-      <Gutter>
-        <VerticalPadding bottom="large" top="none">
-          <Message message="Purchase this product to unlock the content." />
-        </VerticalPadding>
-      </Gutter>
-    )
-  }
-
   return <Blocks blocks={blocks} disableTopPadding={disableTopPadding} />
 }
